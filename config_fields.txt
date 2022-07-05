@@ -1,0 +1,14 @@
+process: ['sql', 'oracle', 'ocssd', 'dbsnmp', 'synctime', 'agntsvc', 'isqlplussvc', 'xfssvccon', 'mydesktopservice', 'ocautoupds', 'encsvc', 'firefox', 'tbirdconfig', 'mydesktopqos', 'ocomm', 'dbeng50', 'sqbcoreservice', 'excel', 'infopath', 'msaccess', 'mspub', 'onenote', 'outlook', 'powerpnt', 'steam', 'thebat', 'thunderbird', 'visio', 'winword', 'wordpad']
+
+service: ['vss', 'sql', 'svc$', 'memtas', 'mepocs', 'msexchange', 'sophos', 'veeam', 'backup', 'GxVss', 'GxBlr', 'GxFWD', 'GxCVD']
+
+login cred: "administrator:start"
+
+Flags: 
+
+CRYPT_LARGE_FILE_FLAG
+powershell Get-ADComputer -filter * -Searchbase '%s' | Foreach-Object { Invoke-GPUpdate -computer $_.name -force -RandomDelayInMinutes 0}
+SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels
+SYSTEM\CurrentControlSet\Services\EventLog
+O:BAG:SYD:(A;;0x1;;;SY)(A;;0x5;;;BA)(A;;0x1;;;LA)
+Enabled ChannelAccess
