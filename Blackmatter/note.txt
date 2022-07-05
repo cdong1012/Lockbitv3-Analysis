@@ -1,0 +1,73 @@
+size: 924
+meme
+BlackMatter v3 structure
+8: originalfilePointerLow
+12: originalfilePointerHigh
+16: int padding
+20: filePointerLow
+24: filePointerHigh
+28: large encryption - skipped bytes low
+32: large encryption - skipped bytes high
+36: file_handle
+40: encryption state
+44: large encryption - chunk count original
+48: large encryption - chunk count
+52: Size of footer
+Footer: 
+    File data struct (Salsa20 - encrypted):
+        before 576: APLib compressed file name
+        576: APLib compressed file name length
+        578: dup 28: large encryption - skipped bytes low
+        582: dup 32: large encryption - skipped bytes high
+        586: dup 48: large encryption - chunk count
+        590: dup 44: large encryption - chunk count original
+        594: SALSA20 File LCG seed
+    658: file data struct size
+    660: RSA_ENCRYPTED_SALSA20_KEY checksum (size 132)
+792: SALSA20 File KEY (size 128)
+920: encrypt size/file size (max: 0x20000)
+924: data buffer (for read and write)
+
+#pragma pack(push, 1)
+struct file_encryption_info
+{
+  byte APLib_compressed_filename[520];
+  _WORD APILib_compressed_filename_length;
+  DWORD skipped_bytes_low;
+  DWORD skipped_bytes_high;
+  DWORD chunk_count;
+  DWORD chunk_count_original;
+  BYTE Salsa20_LCG_seed[64];
+};
+#pragma pack(pop)
+
+struct file_footer {
+    file_encryption_info encryption_info;
+    _WORD file_encryption_info_struct_size;
+    BYTE RSA_encrypted_ChaCha20_key_checksum[132];
+}
+
+
+struct BlackmatterV3FileStruct
+{
+  LONGLONG errorCode;
+  DWORD originalfilePointerLow;
+  DWORD originalfilePointerHigh;
+  int padding;
+  DWORD filePointerLow;
+  DWORD filePointerHigh;
+  DWORD skippedBytesLow;
+  DWORD skippedBytesHigh;
+  HANDLE fileHandle;
+  DWORD threadCurrentState;
+  DWORD chunk_count_original;
+  DWORD chunk_count;
+  DWORD file_footer_size;
+  file_footer file_footer;
+  BYTE ChaCha20_key[128];
+  DWORD max_encrypt_size;
+  LPVOID data_buffer;
+};
+
+
+

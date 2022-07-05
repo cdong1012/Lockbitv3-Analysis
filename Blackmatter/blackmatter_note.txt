@@ -1,0 +1,91 @@
+0: Folders to avoid
+    ['system volume information', 'intel', '$windows.~ws', 'application data', '$recycle.bin', 'mozilla', 'program files (x86)', 'program files', '$windows.~bt', 'public', 'msocache', 'windows', 'default', 'all users', 'tor browser', 'programdata', 'boot', 'config.msi', 'google', 'perflogs', 'appdata', 'windows.old']
+------------------------------
+1: Files to avoid
+    ['desktop.ini', 'autorun.inf', 'ntldr', 'bootsect.bak', 'thumbs.db', 'boot.ini', 'ntuser.dat', 'iconcache.db', 'bootfont.bin', 'ntuser.ini', 'ntuser.dat.log']
+------------------------------
+2: Extensions to avoid
+['themepack', 'nls', 'diagpkg', 'msi', 'lnk', 'exe', 'cab', 'scr', 'bat', 'drv', 'rtp', 'msp', 'prf', 'msc', 'ico', 'key', 'ocx', 'diagcab', 'diagcfg', 'pdb', 'wpx', 'hlp', 'icns', 'rom', 'dll', 'msstyles', 'mod', 'ps1', 'ics', 'hta', 'bin', 'cmd', 'ani', '386', 'lock', 'cur', 'idx', 'sys', 'com', 'deskthemepack', 'shs', 'ldf', 'theme', 'mpa', 'nomedia', 'spl', 'cpl', 'adv', 'icl', 'msu']
+
+3: processes to kill: encsvc thebat mydesktopqos xfssvccon firefox infopath winword steam synctime notepad ocomm onenote mspub thunderbird agntsvc sql excel powerpnt outlook wordpad dbeng50 isqlplussvc sqbcoreservice oracle ocautoupds dbsnmp msaccess tbirdconfig ocssd mydesktopservice visio
+
+4: services to kill: mepocs memtas veeam svc$ backup sql vss msexchange
+
+5: C2: https://mojobiden.com http://mojobiden.com
+
+
+--------------------------------------------------------------------
+raw Salsa20 matrix
+
+0x0: DWORD checksum of RSA encrypted matrix
+original 0x4: DWORD chunk size
+new 0x4: 128 bytes of RSA encrypted matrix
+0x84: 124 bytes of Salsa20 matrix
+--------------------------------------------------------------------
+
+0: error code   
+8: original total number of encrypted bytes LOW
+12: original total number of encrypted bytes HIGH
+20: total number of encrypted bytes LOW
+24: total number of encrypted bytes HIGH
+28: chunk size - number of bytes just encrypted
+36: file handle
+40: child thread curr state
+44: raw Salsa20 matrix
+168: file size (max: 0x100000)
+540: checksum(RSA encrypted Salsa20 matrix) + RSA encrypted Salsa20 matrix
+672: DWORD* number of bytes to read
+676: buffer to read file data in 
+
+struct BlackmatterFileStruct
+{
+  LONGLONG erroCode;
+  DWORD originalTotalEncryptedSizeLow;
+  DWORD originalTotalEncryptedSizeHigh;
+  int padding;
+  DWORD totalEncryptedSizeLow;
+  DWORD totalEncryptedSizeHigh;
+  DWORD chunkSizeLow;
+  DWORD chunkSizeHigh;
+  HANDLE fileHandle;
+  DWORD threadCurrentState;
+  BYTE rawSalsa20Matrix[124];
+  DWORD fileSize;
+  BYTE padding2[368];
+  BYTE fileFooter[132];
+  DWORD *bytesToRead;
+  BYTE *bufferToReadData;
+};
+
+
+First shellcode: 
+- WTSQueryUserToken(Obtains the primary access token of the logged-on user specified by the session ID)
+- NtDuplicateObject(creates a handle that is a duplicate of the specified source handle)
+
+Second:
+-   v7 = 0;
+  v5 = 0;
+  v4 = 719;
+  if ( !mw_NtAllocateVirtualMemory(a1, &v5, 0, &v4, 12288, 64) )
+  {
+    if ( !mw_NtWriteVirtualMemory(a1, v5, a2, a3, 0) )
+    {
+      RemoteThread = mw_CreateRemoteThread(a1, 0, 0, v5, 0, 0, 0);
+      if ( RemoteThread )
+      {
+        mw_WaitForSingleObject(RemoteThread, -1);
+        mw_GetExitCodeThread(RemoteThread, &v7);
+        mw_NtClose(RemoteThread);
+      }
+    }
+    v4 = 0;
+    mw_NtFreeVirtualMemory(a1, &v5, &v4, 0x8000);
+
+
+AES CTR: Matrix = Round keys? -> Need more test.
+-> Also key reuse even if chunking is enabled.
+
+https://github.com/sisoma2/malware_analysis/tree/master/blackmatter
+https://github.com/advanced-threat-research/DarkSide-Config-Extract
+https://www.fireeye.com/content/dam/fireeye-www/current-threats/pdfs/wp-ransomware-protection-and-containment-strategies.pdf
+https://www.installsetupconfig.com/win32programming/networkmanagementapis16_41.html
