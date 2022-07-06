@@ -85,7 +85,7 @@ def resolve_all_APIs(resolve_ea):
             # print('API_hash:', hex(API_hashes_ea + 4 * index), hex(API_hash))
             API_hash = API_hash ^ 0x4506DFCA
             if API_hash in export_hashes:
-                idc.set_name(API_addresses_ea + 4 * index, 'mw_' +
+                idc.set_name(API_addresses_ea + 4 * index,
                              export_hashes[API_hash], idaapi.SN_FORCE)
             else:
                 print(hex(API_addresses_ea), 'NOTFOUND')
@@ -94,7 +94,7 @@ def resolve_all_APIs(resolve_ea):
 
 
 export_hashes = {}
-setup('C:\\Users\\chuon\\Desktop\\IDAPython-Malware-Scripts\\Lockbit\\v3\\exports.json')
+setup('C:\\Users\\chuon\\Desktop\\ReverseEngineering\\Lockbitv3-Analysis\\Lockbit\\v3\\exports.json')
 
 # change the address in the parameter to the address of the function resolving the API
 resolve_all_APIs(0x407C5C)

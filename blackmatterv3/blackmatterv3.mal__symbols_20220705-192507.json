@@ -1,0 +1,940 @@
+{
+    "bpe_info": {
+        "arch": "x32_bit",
+        "base_addr": "0x00400000",
+        "db_path": "C:\\Users\\chuon\\Desktop\\ReverseEngineering\\blackmatterv3\\blackmatterv3.mal_",
+        "exe": "blackmatterv3.mal_",
+        "file_type": "Portable executable for 80386 (PE)"
+    },
+    "functions": [
+        {
+            "address": "0x0040103C",
+            "name": "sub_40103C"
+        },
+        {
+            "address": "0x0040105C",
+            "name": "w_qmemcpy"
+        },
+        {
+            "address": "0x00401074",
+            "name": "w_memset"
+        },
+        {
+            "address": "0x0040108C",
+            "name": "get_PEB"
+        },
+        {
+            "address": "0x0040109C",
+            "name": "sub_40109C"
+        },
+        {
+            "address": "0x004010EC",
+            "name": "sub_4010EC"
+        },
+        {
+            "address": "0x00401124",
+            "name": "sub_401124"
+        },
+        {
+            "address": "0x00401154",
+            "name": "str_hashing"
+        },
+        {
+            "address": "0x00401194",
+            "name": "sub_401194"
+        },
+        {
+            "address": "0x004011BC",
+            "name": "sub_4011BC"
+        },
+        {
+            "address": "0x004011DC",
+            "name": "sub_4011DC"
+        },
+        {
+            "address": "0x0040124C",
+            "name": "base64_decode"
+        },
+        {
+            "address": "0x0040136C",
+            "name": "base64_encode"
+        },
+        {
+            "address": "0x00401470",
+            "name": "get_base64_string_length"
+        },
+        {
+            "address": "0x004014BC",
+            "name": "get_NumberOfProcessors"
+        },
+        {
+            "address": "0x004014C8",
+            "name": "test_OS_version"
+        },
+        {
+            "address": "0x004015A4",
+            "name": "get_CommandLine"
+        },
+        {
+            "address": "0x004015B0",
+            "name": "sub_4015B0"
+        },
+        {
+            "address": "0x004015BC",
+            "name": "sub_4015BC"
+        },
+        {
+            "address": "0x0040161C",
+            "name": "add_a_backslash"
+        },
+        {
+            "address": "0x0040164C",
+            "name": "delete_last_backslash"
+        },
+        {
+            "address": "0x0040167C",
+            "name": "sub_40167C"
+        },
+        {
+            "address": "0x00401708",
+            "name": "sub_401708"
+        },
+        {
+            "address": "0x00401710",
+            "name": "RSA_crypt"
+        },
+        {
+            "address": "0x00401894",
+            "name": "sub_401894"
+        },
+        {
+            "address": "0x004019F8",
+            "name": "sub_4019F8"
+        },
+        {
+            "address": "0x00402030",
+            "name": "weird_ChaCha20_crypt"
+        },
+        {
+            "address": "0x00406B04",
+            "name": "sub_406B04"
+        },
+        {
+            "address": "0x00407014",
+            "name": "sub_407014"
+        },
+        {
+            "address": "0x0040748C",
+            "name": "sub_40748C"
+        },
+        {
+            "address": "0x004074DC",
+            "name": "Turbo_Pascal_LCG"
+        },
+        {
+            "address": "0x004074E4",
+            "name": "populate_random_buffer"
+        },
+        {
+            "address": "0x004074EC",
+            "name": "sub_4074EC"
+        },
+        {
+            "address": "0x00407530",
+            "name": "sub_407530"
+        },
+        {
+            "address": "0x00407570",
+            "name": "sub_407570"
+        },
+        {
+            "address": "0x0040778C",
+            "name": "sub_40778C"
+        },
+        {
+            "address": "0x004077D0",
+            "name": "sub_4077D0"
+        },
+        {
+            "address": "0x0040781C",
+            "name": "sub_40781C"
+        },
+        {
+            "address": "0x00407880",
+            "name": "sub_407880"
+        },
+        {
+            "address": "0x004078E8",
+            "name": "sub_4078E8"
+        },
+        {
+            "address": "0x00407A20",
+            "name": "sub_407A20"
+        },
+        {
+            "address": "0x00407B9C",
+            "name": "sub_407B9C"
+        },
+        {
+            "address": "0x00408098",
+            "name": "resolving_all_APIs"
+        },
+        {
+            "address": "0x00408208",
+            "name": "w_RtlAllocateHeap"
+        },
+        {
+            "address": "0x00408230",
+            "name": "w_RtlFreeHeap"
+        },
+        {
+            "address": "0x00408258",
+            "name": "sub_408258"
+        },
+        {
+            "address": "0x00408284",
+            "name": "sub_408284"
+        },
+        {
+            "address": "0x004082B0",
+            "name": "sub_4082B0"
+        },
+        {
+            "address": "0x004082C4",
+            "name": "set_proc_heap_growable"
+        },
+        {
+            "address": "0x004082F8",
+            "name": "mem_duplicate"
+        },
+        {
+            "address": "0x00408348",
+            "name": "dup_path_add_0_namespace"
+        },
+        {
+            "address": "0x004083A4",
+            "name": "sub_4083A4"
+        },
+        {
+            "address": "0x00408438",
+            "name": "sub_408438"
+        },
+        {
+            "address": "0x004084AC",
+            "name": "sub_4084AC"
+        },
+        {
+            "address": "0x0040850C",
+            "name": "get_MachineGuid"
+        },
+        {
+            "address": "0x004086D0",
+            "name": "sub_4086D0"
+        },
+        {
+            "address": "0x00408778",
+            "name": "generate_encrypted_extension"
+        },
+        {
+            "address": "0x00408820",
+            "name": "decrypt_buffer"
+        },
+        {
+            "address": "0x00408850",
+            "name": "sub_408850"
+        },
+        {
+            "address": "0x0040888C",
+            "name": "sub_40888C"
+        },
+        {
+            "address": "0x004088C4",
+            "name": "parse_config"
+        },
+        {
+            "address": "0x00408B90",
+            "name": "update_file_security_info_to_gain_access"
+        },
+        {
+            "address": "0x00408BB4",
+            "name": "set_DACL_security_Desktop_object"
+        },
+        {
+            "address": "0x00408D28",
+            "name": "set_to_current_image_path"
+        },
+        {
+            "address": "0x00408D68",
+            "name": "sub_408D68"
+        },
+        {
+            "address": "0x00408DBC",
+            "name": "sub_408DBC"
+        },
+        {
+            "address": "0x00408E90",
+            "name": "sub_408E90"
+        },
+        {
+            "address": "0x00408F6C",
+            "name": "sub_408F6C"
+        },
+        {
+            "address": "0x0040912C",
+            "name": "sub_40912C"
+        },
+        {
+            "address": "0x004095A4",
+            "name": "sub_4095A4"
+        },
+        {
+            "address": "0x004096BC",
+            "name": "sub_4096BC"
+        },
+        {
+            "address": "0x00409718",
+            "name": "sub_409718"
+        },
+        {
+            "address": "0x00409808",
+            "name": "sub_409808"
+        },
+        {
+            "address": "0x00409868",
+            "name": "sub_409868"
+        },
+        {
+            "address": "0x00409964",
+            "name": "setup_wallpaper"
+        },
+        {
+            "address": "0x0040A048",
+            "name": "sub_40A048"
+        },
+        {
+            "address": "0x0040A0E0",
+            "name": "fix_command_line_space"
+        },
+        {
+            "address": "0x0040A1D0",
+            "name": "sub_40A1D0"
+        },
+        {
+            "address": "0x0040A278",
+            "name": "sub_40A278"
+        },
+        {
+            "address": "0x0040A388",
+            "name": "pre_encryption_setup"
+        },
+        {
+            "address": "0x0040A4A4",
+            "name": "w_get_filesize"
+        },
+        {
+            "address": "0x0040A500",
+            "name": "StartAddress"
+        },
+        {
+            "address": "0x0040A518",
+            "name": "sub_40A518"
+        },
+        {
+            "address": "0x0040A5C0",
+            "name": "sub_40A5C0"
+        },
+        {
+            "address": "0x0040A5D0",
+            "name": "sub_40A5D0"
+        },
+        {
+            "address": "0x0040A668",
+            "name": "sub_40A668"
+        },
+        {
+            "address": "0x0040A690",
+            "name": "launch_thread_to_check_PathIsNetworkPathW"
+        },
+        {
+            "address": "0x0040A738",
+            "name": "sub_40A738"
+        },
+        {
+            "address": "0x0040A748",
+            "name": "sub_40A748"
+        },
+        {
+            "address": "0x0040A7DC",
+            "name": "sub_40A7DC"
+        },
+        {
+            "address": "0x0040A7EC",
+            "name": "sub_40A7EC"
+        },
+        {
+            "address": "0x0040A880",
+            "name": "sub_40A880"
+        },
+        {
+            "address": "0x0040A898",
+            "name": "sub_40A898"
+        },
+        {
+            "address": "0x0040A940",
+            "name": "sub_40A940"
+        },
+        {
+            "address": "0x0040A95C",
+            "name": "sub_40A95C"
+        },
+        {
+            "address": "0x0040AA10",
+            "name": "sub_40AA10"
+        },
+        {
+            "address": "0x0040AA9C",
+            "name": "sub_40AA9C"
+        },
+        {
+            "address": "0x0040AD54",
+            "name": "set_mount_point"
+        },
+        {
+            "address": "0x0040AE1C",
+            "name": "sub_40AE1C"
+        },
+        {
+            "address": "0x0040AF64",
+            "name": "sub_40AF64"
+        },
+        {
+            "address": "0x0040AFFC",
+            "name": "w_WTSQueryUserToken"
+        },
+        {
+            "address": "0x0040B024",
+            "name": "sub_40B024"
+        },
+        {
+            "address": "0x0040B1B8",
+            "name": "sub_40B1B8"
+        },
+        {
+            "address": "0x0040B270",
+            "name": "ProcessHollowing_launching"
+        },
+        {
+            "address": "0x0040B578",
+            "name": "parsing_login_credentials"
+        },
+        {
+            "address": "0x0040B6E4",
+            "name": "get_duplicated_Explorer_token"
+        },
+        {
+            "address": "0x0040B71C",
+            "name": "impersonate_through_token"
+        },
+        {
+            "address": "0x0040B7A0",
+            "name": "w_NtSetInformationThread_ThreadHideFromDebugger"
+        },
+        {
+            "address": "0x0040B7CC",
+            "name": "sub_40B7CC"
+        },
+        {
+            "address": "0x0040B828",
+            "name": "test_token_RID_admins"
+        },
+        {
+            "address": "0x0040B838",
+            "name": "check_SID_priviledge"
+        },
+        {
+            "address": "0x0040B8F4",
+            "name": "check_if_in_Domain_Admins"
+        },
+        {
+            "address": "0x0040B9B0",
+            "name": "is_process_LocalSystem"
+        },
+        {
+            "address": "0x0040BA40",
+            "name": "try_RtlAdjustPrivilege"
+        },
+        {
+            "address": "0x0040BA70",
+            "name": "sub_40BA70"
+        },
+        {
+            "address": "0x0040BAC4",
+            "name": "sub_40BAC4"
+        },
+        {
+            "address": "0x0040BB0C",
+            "name": "sub_40BB0C"
+        },
+        {
+            "address": "0x0040BC80",
+            "name": "sub_40BC80"
+        },
+        {
+            "address": "0x0040BDF8",
+            "name": "relaunch_UAC_bypass"
+        },
+        {
+            "address": "0x0040BEAC",
+            "name": "generate_ransomnote_name"
+        },
+        {
+            "address": "0x0040BF30",
+            "name": "sub_40BF30"
+        },
+        {
+            "address": "0x0040BFC8",
+            "name": "is_file_ransom_note"
+        },
+        {
+            "address": "0x0040C028",
+            "name": "printer_print_file"
+        },
+        {
+            "address": "0x0040C158",
+            "name": "drop_ransom_note_in_path"
+        },
+        {
+            "address": "0x0040C248",
+            "name": "sub_40C248"
+        },
+        {
+            "address": "0x0040C3B4",
+            "name": "sub_40C3B4"
+        },
+        {
+            "address": "0x0040C608",
+            "name": "sub_40C608"
+        },
+        {
+            "address": "0x0040C808",
+            "name": "sub_40C808"
+        },
+        {
+            "address": "0x0040C874",
+            "name": "sub_40C874"
+        },
+        {
+            "address": "0x0040C8D8",
+            "name": "sub_40C8D8"
+        },
+        {
+            "address": "0x0040CAAC",
+            "name": "sub_40CAAC"
+        },
+        {
+            "address": "0x0040CAD0",
+            "name": "sub_40CAD0"
+        },
+        {
+            "address": "0x0040CC64",
+            "name": "sub_40CC64"
+        },
+        {
+            "address": "0x0040CCB4",
+            "name": "sub_40CCB4"
+        },
+        {
+            "address": "0x0040CE8C",
+            "name": "sub_40CE8C"
+        },
+        {
+            "address": "0x0040CF7C",
+            "name": "sub_40CF7C"
+        },
+        {
+            "address": "0x0040D460",
+            "name": "sub_40D460"
+        },
+        {
+            "address": "0x0040D5E8",
+            "name": "sub_40D5E8"
+        },
+        {
+            "address": "0x0040D62C",
+            "name": "sub_40D62C"
+        },
+        {
+            "address": "0x0040D83C",
+            "name": "sub_40D83C"
+        },
+        {
+            "address": "0x0040D9B0",
+            "name": "sub_40D9B0"
+        },
+        {
+            "address": "0x0040DB40",
+            "name": "sub_40DB40"
+        },
+        {
+            "address": "0x0040DBD4",
+            "name": "sub_40DBD4"
+        },
+        {
+            "address": "0x0040DC58",
+            "name": "sub_40DC58"
+        },
+        {
+            "address": "0x0040DDAC",
+            "name": "sub_40DDAC"
+        },
+        {
+            "address": "0x0040DDDC",
+            "name": "ransomware_children_thread"
+        },
+        {
+            "address": "0x0040E170",
+            "name": "launch_children_threads"
+        },
+        {
+            "address": "0x0040E1F8",
+            "name": "clean_up_children_threads"
+        },
+        {
+            "address": "0x0040E240",
+            "name": "setup_RSA"
+        },
+        {
+            "address": "0x0040E2D8",
+            "name": "generate_checksum"
+        },
+        {
+            "address": "0x0040E334",
+            "name": "attempt_gain_access_to_file"
+        },
+        {
+            "address": "0x0040E3E4",
+            "name": "is_file_already_encrypted_checksum"
+        },
+        {
+            "address": "0x0040E4A4",
+            "name": "sub_40E4A4"
+        },
+        {
+            "address": "0x0040E4BC",
+            "name": "check_is_file_large_extension"
+        },
+        {
+            "address": "0x0040E508",
+            "name": "sub_40E508"
+        },
+        {
+            "address": "0x0040E844",
+            "name": "is_file_extension_image"
+        },
+        {
+            "address": "0x0040E894",
+            "name": "sub_40E894"
+        },
+        {
+            "address": "0x0040E8C8",
+            "name": "sub_40E8C8"
+        },
+        {
+            "address": "0x0040E978",
+            "name": "sub_40E978"
+        },
+        {
+            "address": "0x0040E9C4",
+            "name": "populate_file_share_struct"
+        },
+        {
+            "address": "0x0040EC0C",
+            "name": "parent_process_and_send_file_to_child"
+        },
+        {
+            "address": "0x0040EDF8",
+            "name": "sub_40EDF8"
+        },
+        {
+            "address": "0x0040EE5C",
+            "name": "dup_wcscat"
+        },
+        {
+            "address": "0x0040EEB0",
+            "name": "check_file_name"
+        },
+        {
+            "address": "0x0040EF48",
+            "name": "check_folder_name"
+        },
+        {
+            "address": "0x0040EF9C",
+            "name": "ransomware_parent_thread"
+        },
+        {
+            "address": "0x0040F214",
+            "name": "sub_40F214"
+        },
+        {
+            "address": "0x0040F238",
+            "name": "sub_40F238"
+        },
+        {
+            "address": "0x0040F30C",
+            "name": "sub_40F30C"
+        },
+        {
+            "address": "0x0040F33C",
+            "name": "sub_40F33C"
+        },
+        {
+            "address": "0x0040F374",
+            "name": "sub_40F374"
+        },
+        {
+            "address": "0x0040F4C8",
+            "name": "sub_40F4C8"
+        },
+        {
+            "address": "0x0040F908",
+            "name": "sub_40F908"
+        },
+        {
+            "address": "0x0040FC80",
+            "name": "encrypt_UNC_server"
+        },
+        {
+            "address": "0x0040FFB8",
+            "name": "launch_threads_to_encrypt"
+        },
+        {
+            "address": "0x00410084",
+            "name": "sub_410084"
+        },
+        {
+            "address": "0x00410230",
+            "name": "sub_410230"
+        },
+        {
+            "address": "0x0041047C",
+            "name": "sub_41047C"
+        },
+        {
+            "address": "0x004104E4",
+            "name": "sub_4104E4"
+        },
+        {
+            "address": "0x00410718",
+            "name": "sub_410718"
+        },
+        {
+            "address": "0x004107BC",
+            "name": "sub_4107BC"
+        },
+        {
+            "address": "0x0041088C",
+            "name": "sub_41088C"
+        },
+        {
+            "address": "0x00410A4C",
+            "name": "sub_410A4C"
+        },
+        {
+            "address": "0x00410C5D",
+            "name": "sub_410C5D"
+        },
+        {
+            "address": "0x00410C74",
+            "name": "sub_410C74"
+        },
+        {
+            "address": "0x00410CF8",
+            "name": "sub_410CF8"
+        },
+        {
+            "address": "0x00410DAC",
+            "name": "sub_410DAC"
+        },
+        {
+            "address": "0x00410E88",
+            "name": "sub_410E88"
+        },
+        {
+            "address": "0x00410F04",
+            "name": "sub_410F04"
+        },
+        {
+            "address": "0x00411034",
+            "name": "sub_411034"
+        },
+        {
+            "address": "0x004110A8",
+            "name": "sub_4110A8"
+        },
+        {
+            "address": "0x00411140",
+            "name": "try_get_desktop_window"
+        },
+        {
+            "address": "0x0041118C",
+            "name": "switch_safeboot"
+        },
+        {
+            "address": "0x004111D8",
+            "name": "encrypt_target_path"
+        },
+        {
+            "address": "0x004115A4",
+            "name": "encrypt_target_path_0"
+        },
+        {
+            "address": "0x004117F0",
+            "name": "execute_full_functionality"
+        },
+        {
+            "address": "0x004119C4",
+            "name": "main_functionality"
+        },
+        {
+            "address": "0x00411ADC",
+            "name": "sub_411ADC"
+        },
+        {
+            "address": "0x00411BA4",
+            "name": "sub_411BA4"
+        },
+        {
+            "address": "0x00411CAA",
+            "name": "start"
+        },
+        {
+            "address": "0x00411D54",
+            "name": "CreateSolidBrush"
+        },
+        {
+            "address": "0x00411D5A",
+            "name": "SelectObject"
+        },
+        {
+            "address": "0x00411D60",
+            "name": "SetPixel"
+        },
+        {
+            "address": "0x00411D66",
+            "name": "SetTextColor"
+        },
+        {
+            "address": "0x00411DBC",
+            "name": "sub_411DBC"
+        },
+        {
+            "address": "0x00411DFB",
+            "name": "sub_411DFB"
+        },
+        {
+            "address": "0x00411EB7",
+            "name": "sub_411EB7"
+        },
+        {
+            "address": "0x00411F0C",
+            "name": "sub_411F0C"
+        },
+        {
+            "address": "0x00412142",
+            "name": "sub_412142"
+        },
+        {
+            "address": "0x004121F6",
+            "name": "sub_4121F6"
+        },
+        {
+            "address": "0x004124C3",
+            "name": "sub_4124C3"
+        },
+        {
+            "address": "0x0041279E",
+            "name": "sub_41279E"
+        },
+        {
+            "address": "0x0041283A",
+            "name": "sub_41283A"
+        },
+        {
+            "address": "0x004128D6",
+            "name": "APLIB_compress"
+        },
+        {
+            "address": "0x00413024",
+            "name": "w_APLIB_compress"
+        },
+        {
+            "address": "0x00413074",
+            "name": "APLib_decompress"
+        },
+        {
+            "address": "0x004131BC",
+            "name": "CreateMenu"
+        },
+        {
+            "address": "0x004131C2",
+            "name": "DefWindowProcW"
+        },
+        {
+            "address": "0x004131C8",
+            "name": "GetDlgItem"
+        },
+        {
+            "address": "0x004131CE",
+            "name": "GetKeyNameTextW"
+        },
+        {
+            "address": "0x004131D4",
+            "name": "GetWindowTextW"
+        },
+        {
+            "address": "0x004131DA",
+            "name": "LoadImageW"
+        },
+        {
+            "address": "0x004131E0",
+            "name": "LoadMenuW"
+        },
+        {
+            "address": "0x004131E6",
+            "name": "FormatMessageW"
+        },
+        {
+            "address": "0x004131EC",
+            "name": "FreeLibrary"
+        },
+        {
+            "address": "0x004131F2",
+            "name": "GetDateFormatW"
+        },
+        {
+            "address": "0x004131F8",
+            "name": "GetLastError"
+        },
+        {
+            "address": "0x004131FE",
+            "name": "GetModuleHandleA"
+        },
+        {
+            "address": "0x00413204",
+            "name": "GetProcAddress"
+        },
+        {
+            "address": "0x0041320A",
+            "name": "GetTickCount"
+        },
+        {
+            "address": "0x00413210",
+            "name": "LoadLibraryExA"
+        },
+        {
+            "address": "0x00413216",
+            "name": "LoadLibraryW"
+        }
+    ],
+    "functions_count": 232
+}
