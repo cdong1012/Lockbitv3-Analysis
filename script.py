@@ -58,31 +58,40 @@
 #         temp_str += chr(buffer2[i])
 
 # print(result)
-def ror(val, r_bits, max_bits): return \
-    ((val & (2**max_bits-1)) >> r_bits % max_bits) | \
-    (val << (max_bits-(r_bits % max_bits)) & (2**max_bits-1))
+# def ror(val, r_bits, max_bits): return \
+#     ((val & (2**max_bits-1)) >> r_bits % max_bits) | \
+#     (val << (max_bits-(r_bits % max_bits)) & (2**max_bits-1))
 
 
-def ror13add(input_str):
-    temp = [ord(each) for each in input_str]
-    result = 0
-    for i in range(len(temp)):
-        if temp[i] >= 0x41 and temp[i] <= 0x5A:
-            temp[i] |= 0x20
-        result = temp[i] + ror(result, 13, 32)
-    result = ror(result, 13, 32)
-    return result
+# def ror13add(input_str):
+#     temp = [ord(each) for each in input_str]
+#     result = 0
+#     for i in range(len(temp)):
+#         if temp[i] >= 0x41 and temp[i] <= 0x5A:
+#             temp[i] |= 0x20
+#         result = temp[i] + ror(result, 13, 32)
+#     result = ror(result, 13, 32)
+#     return result
 
 
-for first in range(0x41, 0x5b):
-    for second in range(0x41, 0x5b):
-        for third in range(0x41, 0x5b):
-            # for fourth in range(0x41, 0x5b):
-            # for fifth in range(0x41, 0x5b):
-            target = chr(first) + chr(second) + \
-                chr(third)
+# for first in range(0x41, 0x5b):
+#     for second in range(0x41, 0x5b):
+#         for third in range(0x41, 0x5b):
+#             # for fourth in range(0x41, 0x5b):
+#             # for fifth in range(0x41, 0x5b):
+#             target = chr(first) + chr(second) + \
+#                 chr(third)
 
-            if ror13add(target) == 0x35D31849:
-                print(target.lower())
+#             if ror13add(target) == 0x35D31849:
+#                 print(target.lower())
 
-print(ror13add('..') == 0xE3426CD7)
+# print(ror13add('..') == 0xE3426CD7)
+from aplib import decompress
+
+buffer = [0x68, 0xE0, 0x65, 0xE0, 0x6C, 0xCE, 0x05, 0x6F, 0x0E, 0x2E, 0x0E, 0x74, 0x0D, 0x78, 0x09, 0xB0,
+          0x02, 0x00]
+
+decompressed = ''.join([chr(each)
+                        for each in decompress(bytearray(buffer)) if each != 0x0])
+
+print(decompressed)

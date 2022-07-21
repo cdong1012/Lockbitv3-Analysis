@@ -1,0 +1,14 @@
+LockBit Black Ransomware
+
+Your data are stolen and encrypted
+
+The data will be published on TOR website
+http://lockbitapt2yfbt7lchxejug47kmqvqqxvvjpqkmevv4l3azl3gy6pyd.onion
+and http://lockbitapt.uz if you do not pay the ransom
+
+You can contact us and decrypt one file for free on these TOR sites
+http://lockbitsupa7e3b4pkn4mgkgojrl5iqgx24clbzc4xm7i6jeetsia3qd.onion
+http://lockbitsupn2h6be2cnqpvncyhj4rgmnwn44633hnzzmtxdvjoqlp7yd.onion
+http://lockbitsupp.uz
+
+Decryption ID: %s
